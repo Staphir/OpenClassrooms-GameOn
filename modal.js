@@ -29,13 +29,35 @@ function closeModal() {
   modalbg.style.display = "none";
 }
 
-// submit modal event
-async function validate(event){
-  await stockFormDatasEnter();
-  if(error){
-    event.preventDefault();
+// validate form button
+document.getElementById("btn-validate-form").addEventListener("click", validateForm);
+
+// validate form
+function validateForm() {
+  stockFormDatasEnter();
+  if(!error){
+    formData.forEach((divData) => divData.style.display = "none");
+    document.getElementById("btn-validate-form").style.display = "none";
+  
+    document.getElementById("validate-text").style.display = "block";
+    document.getElementById("btn-close-validated-form").style.display = "block";
   }
 }
+
+// submit modal event
+// async function validate(event){
+//   await stockFormDatasEnter();
+//   if(error){
+//     event.preventDefault();
+//   } else {
+
+//   }
+// }
+
+function displayValidateForm(){
+  modalbg.style.display = "block";
+  document.getElementsById("modal-body-content").style.display = "none";
+  document.getElementById("modal-validate").style.display = "block";}
 
 // check form
 const formDataEnter = {};

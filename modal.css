@@ -533,3 +533,12 @@ footer {
   }
 }
 
+.modal-validate-text {
+  display: none;
+  text-align: center;
+  font-size: 36px;
+}
+
+#btn-close-validated-form {
+  display: none;
+}
