@@ -59,7 +59,7 @@
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="validate()"
+              onsubmit="validate(event)"
             >
               <div
                 class="formData">
@@ -197,16 +197,16 @@
                 </label>
                 <br>
               </div>
-              <button class="btn-submit button" id="btn-validate-form" type="button">C'est parti</button>
+              <input
+                class="btn-submit button"
+                id="btn-validate-form"
+                type="submit"
+                value="C'est parti"
+              />
               <p class="modal-validate-text" id="validate-text">
                 Merci pour votre inscription
               </p>
-              <input
-                class="btn-submit button"
-                id="btn-close-validated-form"
-                type="submit"
-                value="Fermer"
-              />
+              <button class="btn-submit button" id="btn-close-validated-form" type="button">Fermer</button>
             </form>
           </div>
         </div>

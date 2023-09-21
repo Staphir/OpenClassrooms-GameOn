@@ -21,8 +21,11 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
-// close modal event
+// cross close modal event
 modalCloseBtn.forEach((btn) => btn.addEventListener("click", closeModal));
+
+// button close modal event
+document.getElementById("btn-close-validated-form").addEventListener("click", closeModal);
 
 // close modal form
 function closeModal() {
@@ -45,14 +48,10 @@ function validateForm() {
 }
 
 // submit modal event
-// async function validate(event){
-//   await stockFormDatasEnter();
-//   if(error){
-//     event.preventDefault();
-//   } else {
-
-//   }
-// }
+function validate(event){
+  event.preventDefault();
+  validateForm();
+}
 
 function displayValidateForm(){
   modalbg.style.display = "block";

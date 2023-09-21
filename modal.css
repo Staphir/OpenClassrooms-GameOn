@@ -537,6 +537,7 @@ footer {
   display: none;
   text-align: center;
   font-size: 36px;
+  margin-bottom: 15px;
 }
 
 #btn-close-validated-form {
